@@ -1,10 +1,11 @@
 # Spring Developer - Interview Test 001
 
-The purpose of this test application to to evaluate the awarenes of the developers knowledge of the:
-* Spring framework, 
-* Security,
+The purpose of this test application is to evaluate the awarenes of the developers knowledge of the:
+* Spring framework 
+* Security
 * Clarity of code
-* Database   
+* Database handling 
+* Object design 
 
 # Starting the application
 The application is a standard maven based spring boot application. It is already configured to provide a sample LDAP services and embedded h2 database.
@@ -33,7 +34,7 @@ Ref: resources/schema.sql and resources/data.sql
 
 # Test Activities
 
-Provide implementations for the following methods
+Provide implementations for the following methods.
 * DataController.getPersonData
 * DataController.recordPersonQualification
 
