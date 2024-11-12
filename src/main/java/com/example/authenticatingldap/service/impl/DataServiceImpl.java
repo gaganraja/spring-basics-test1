@@ -50,7 +50,7 @@ public class DataServiceImpl implements DataService{
 	}
 
 	@Override
-	public PersonQualificationData updatePersonQualification(Long personId, QualificationData qualificationData) throws Exception{
+	public PersonQualificationData createPersonQualification(Long personId, QualificationData qualificationData) throws Exception{
 		Person person = personRepository.findById(personId).get();
 		Qualification qualification = qualificationRepository.findById(qualificationData.getId()).get();
 		

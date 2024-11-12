@@ -19,7 +19,7 @@ import jakarta.persistence.Table;
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Qualification {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id", nullable=false)
 	private Long id;
 	

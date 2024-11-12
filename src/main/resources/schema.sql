@@ -1,12 +1,12 @@
 CREATE TABLE person (
-  id          INTEGER PRIMARY KEY,
+  id          INTEGER AUTO_INCREMENT PRIMARY KEY,
   firstname VARCHAR(64) NOT NULL,
   surname VARCHAR(64) NOT NULL,
   gender VARCHAR(1) NOT NULL,
   completed   BIT NOT NULL);
 
 CREATE TABLE qualification (
-  id          INTEGER PRIMARY KEY,
+  id          INTEGER AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(64) NOT NULL,
   description VARCHAR(200) NOT NULL);
 

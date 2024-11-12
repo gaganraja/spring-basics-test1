@@ -10,6 +10,6 @@ public interface DataService {
 	
 	boolean isPersonQualificationAlreadyExist(Long personId, QualificationData qualification) throws Exception;
 
-	PersonQualificationData updatePersonQualification(Long valueOf, QualificationData qualification) throws Exception;
+	PersonQualificationData createPersonQualification(Long valueOf, QualificationData qualification) throws Exception;
 
 }

@@ -110,7 +110,7 @@ public class DataServiceTest {
 		when(qualificationRepository.findById(1001l)).thenReturn(Optional.of(mockQualification));
 		QualificationData qualificationData = new QualificationData();
 		qualificationData.setId(1001l);
-		PersonQualificationData personQualificationData = dataService.updatePersonQualification(1000l, qualificationData);
+		PersonQualificationData personQualificationData = dataService.createPersonQualification(1000l, qualificationData);
 		assertTrue(mockPerson.isCompleted());
 		assertNotNull(personQualificationData);
 		assertEquals(1000l, personQualificationData.getPersonId());

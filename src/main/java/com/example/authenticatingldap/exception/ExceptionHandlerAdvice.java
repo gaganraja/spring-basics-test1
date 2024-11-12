@@ -13,9 +13,19 @@ public class ExceptionHandlerAdvice {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
     
-    @ExceptionHandler(DataAccessException.class)
-    public ResponseEntity<String> handleDataNotFoundException(DataAccessException ex) {
+    @ExceptionHandler(ResourceAccessException.class)
+    public ResponseEntity<String> handleExceptionThrownWhileAccessingData(ResourceAccessException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> handleDataNotFoundException(ResourceNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+    
+    @ExceptionHandler(InvalidResourceStateException.class)
+    public ResponseEntity<String> handleInvalidResourceStateException(InvalidResourceStateException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
     }
 
 }
