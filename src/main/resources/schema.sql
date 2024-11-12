@@ -11,7 +11,7 @@ CREATE TABLE qualification (
   description VARCHAR(200) NOT NULL);
 
 CREATE TABLE person_qualification (
-  id                INTEGER PRIMARY KEY,
+  id                INTEGER AUTO_INCREMENT PRIMARY KEY,
   person_id         INTEGER ,
   qualification_id  INTEGER ,
   completed   DATE NOT NULL,
